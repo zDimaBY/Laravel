@@ -65,6 +65,13 @@ body {
 .center-align {
   text-align: center;
 }
+ul.social-btn {
+  padding: 0px 15px;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  margin-top: 10px;
+  border-block-color: coral;
+}
 input:active,
 input {
   outline: none;
@@ -80,8 +87,19 @@ input {
   position: relative;
   padding-left: 30px;
 }
-.about-me {
+.aboutme-section {
   background-color: #131313;
   padding: 50px;
   margin: 19px;
+}
+.aboutme-section .personal-details-right {
+  padding-bottom: 30px;
+  border-bottom: 1px solid #393939;
+}
+.aboutme-section .personal-details-right h2.title {
+  margin-top: 50px;
+}
+h2.title {
+  font-size: 20px;
+  line-height: 24px;
 }
