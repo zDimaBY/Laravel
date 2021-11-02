@@ -63,12 +63,10 @@
     Your work experience: <?php echo $experience; ?><br>
     about you: <?php echo $message;
         } else {
-            // добавили сообщение
-            echo 'Введенные данные некорректны';
+            echo 'The data entered is incorrect';
         }
     } else {
-        // добавили сообщение
-        echo 'Заполните пустые поля';
+        echo 'Fill in the blanks!!';
     }
     ?>
 </body>

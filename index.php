@@ -104,6 +104,9 @@
         <div class="aboutme-section">
             <?php require_once 'php-task-two.php'; ?>
         </div>
+        <div class="aboutme-section">
+            <?php require_once 'php-task-three.php'; ?>
+        </div>
     </div>
 </body>
 

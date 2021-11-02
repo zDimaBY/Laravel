@@ -104,7 +104,7 @@ h2.title {
   line-height: 24px;
 }
 .city_list {
-  display: flex;
+  display: inline-block;
   flex-direction: row;
   flex-wrap: wrap;
 }
@@ -114,4 +114,7 @@ h2.title {
   box-sizing: border-box;
   padding: 7px 10px;
   margin: 1px;
+}
+.parser-colum {
+  display: block ruby;
 }
