@@ -103,3 +103,15 @@ h2.title {
   font-size: 20px;
   line-height: 24px;
 }
+.city_list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.city_list-row {
+  display: flex;
+  box-sizing: border-box;
+  padding: 7px 10px;
+  margin: 1px;
+}
