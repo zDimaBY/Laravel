@@ -171,7 +171,7 @@ class quadangle
 }
 for ($i = 0; $i < 2; $i++) {
     $i2 = $i * 10;
-    $draw = new quadangle(
+    $draw = new quadangle( //quadangle
         ($xx1 = rand(0, 100)),
         ($yy1 = rand(0, 100)),
         ($xx2 = rand(120, 200)),
@@ -211,8 +211,7 @@ for ($i = 0; $i < 2; $i++) {
             $B,
         $color
     );
-    $draw->quadangle(); // threeangle
-    $draw = new quadangle(
+    $draw = new quadangle( // threeangle
         ($xx1 = rand(220, 300)),
         ($yy1 = rand(130, 200)),
         ($xx2 = rand(320, 350)),
@@ -252,7 +251,6 @@ for ($i = 0; $i < 2; $i++) {
             $B,
         $color
     );
-    $draw->multipath();
     $draw = new quadangle(
         0,
         0,
@@ -293,7 +291,6 @@ for ($i = 0; $i < 2; $i++) {
             $B,
         $color
     );
-    $draw->circle();
     $draw = new quadangle( //trapezoid
         ($xx1 = rand(550, 600)),
         ($yy1 = rand(140, 170)),
@@ -334,7 +331,6 @@ for ($i = 0; $i < 2; $i++) {
             $B,
         $color
     );
-    $draw->multipath();
 }
 imagejpeg($img);
 ?>
