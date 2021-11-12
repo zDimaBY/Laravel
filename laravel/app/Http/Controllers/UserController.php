@@ -14,6 +14,8 @@ class UserController extends Controller
      */
     public function index()
     {
+        $users = User::get();
+        return view('index', compact('users'));
         //dd(1234);
     }
 
@@ -24,7 +26,7 @@ class UserController extends Controller
      */
     public function create()
     {
-        //
+        return view('form');
     }
 
     /**
@@ -35,7 +37,7 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //return view()
     }
 
     /**
@@ -46,7 +48,7 @@ class UserController extends Controller
      */
     public function show(User $user)
     {
-        //
+        return view('show');
     }
 
     /**
@@ -57,7 +59,7 @@ class UserController extends Controller
      */
     public function edit(User $user)
     {
-        //
+        return view('form', compact('user'));
     }
 
     /**
