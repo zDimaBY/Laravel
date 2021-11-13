@@ -1,33 +1,33 @@
 @extends('layout')
 @section('title', 'users')
 @section('content')
+<a role="button" class="btn btn-dark" href="{{route('users.create')}}">Create user</a>
 <table class="table">
    <thead>
      <tr>
        <th scope="col">#</th>
-       <th scope="col">First</th>
-       <th scope="col">Last</th>
-       <th scope="col">Handle</th>
+       <th scope="col">Name</th>
+       <th scope="col">Email</th>
+       <th scope="col">password</th>
      </tr>
    </thead>
    <tbody>
-     <tr>
-       <th scope="row">1</th>
-       <td>Mark</td>
-       <td>Otto</td>
-       <td>@mdo</td>
-     </tr>
-     <tr>
-       <th scope="row">2</th>
-       <td>Jacob</td>
-       <td>Thornton</td>
-       <td>@fat</td>
-     </tr>
-     <tr>
-       <th scope="row">3</th>
-       <td colspan="2">Larry the Bird</td>
-       <td>@twitter</td>
-     </tr>
+       @foreach ($users as $user)
+       <tr>
+         <th scope="row">{{$user->id}}</th>
+         <td><a href="{{route('users.show', $user)}}">{{$user->name}}</a></td>
+         <td><a href="{{route('users.show', $user)}}">{{$user->email}}</a></td>
+         <td><a href="{{route('users.show', $user)}}">{{$user->password}}</a></td>
+         <td>
+            <form method="POST" action="{{route('users.destroy', $user)}}">
+                <a type="button" class="btn btn-danger m-1" href="{{route('users.edit', $user)}}">Edit</a>
+                @csrf
+                @method('DELETE')
+                <button class="btn btn-danger m-1" type="submit">Delete</button>
+            </form>
+        </td>
+       </tr>
+       @endforeach
    </tbody>
 </table>
 @endsection
