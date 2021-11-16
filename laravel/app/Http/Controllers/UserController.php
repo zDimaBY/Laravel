@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use App\Http\Requests\UserRequest;
-use Illuminate\Http\Request;
+//use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
@@ -15,7 +15,7 @@ class UserController extends Controller
      */
     public function index()
     {
-        $users = User::get();
+        $users = User::paginate(5);
         return view('index', compact('users'));
         //dd(1234);
     }

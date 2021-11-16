@@ -1,8 +1,8 @@
 @extends('layout')
 @section('title', 'users')
 @section('content')
-<a role="button" class="btn btn-dark" href="{{route('users.create')}}">Create user</a>
-<table class="table">
+<a role="button" class="btn btn-light" href="{{route('users.create')}}">Create user</a>
+<table class="table table-dark">
    <thead>
      <tr>
        <th scope="col">#</th>
@@ -30,4 +30,5 @@
        @endforeach
    </tbody>
 </table>
+{{$users->links()}}
 @endsection

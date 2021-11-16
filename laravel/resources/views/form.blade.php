@@ -26,7 +26,7 @@
             @enderror
         </div>
       </div>
-      <button type="submit" class="btn btn-dark mt-2">{{isset($user) ? 'Update' : 'Create'}}</button>
+      <button type="submit" class="btn btn-light mt-2">{{isset($user) ? 'Update' : 'Create'}}</button>
       <a href="{{route('users.index')}}" type="button" class="btn btn-info mt-2">Back</a>
 </form>
 @endsection
