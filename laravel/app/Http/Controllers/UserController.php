@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use App\Models\category;
 use App\Http\Requests\UserRequest;
 //use Illuminate\Http\Request;
 
@@ -16,7 +17,8 @@ class UserController extends Controller
     public function index()
     {
         $users = User::paginate(5);
-        return view('index', compact('users'));
+        $categories = category::all();
+        return view('index', compact(['users', 'categories']));
         //dd(1234);
     }
 

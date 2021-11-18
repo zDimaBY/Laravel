@@ -8,9 +8,9 @@
 
 cd /var/www/
 
-git clone https://github.com/zDimaBY/Laravel folder
+git clone https://github.com/zDimaBY/Laravel
 
-cd folder
+cd /Laravel/laravel
 
 composer install
 
