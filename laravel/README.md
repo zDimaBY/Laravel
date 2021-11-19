@@ -16,6 +16,6 @@ composer install
 
 define database, APP_KEY in .env
 
-php artisan migrate --seed
+php artisan db:seed && php artisan db:seed --class=CategorySeeder && php artisan db:seed --class=ProductSeeder
 
 php artisan serve

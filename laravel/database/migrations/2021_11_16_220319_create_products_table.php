@@ -22,7 +22,7 @@ class CreateProductsTable extends Migration
             $table
                 ->foreign('product_id')
                 ->references('id')
-                ->on('users')
+                ->on('categories')
                 ->onDelete('cascade');
             $table->string('product');
             $table->timestamps();
