@@ -16,7 +16,7 @@ class ProductSeeder extends Seeder
     {
         for ($i = 1; $i <= 10; $i++) {
             DB::table('products')->insert([
-                'product_id' => rand(1, 4),
+                'category_id' => rand(1, 4),
                 'product' => 'product ' . $i,
             ]);
         }

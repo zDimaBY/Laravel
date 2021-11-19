@@ -37,8 +37,11 @@
     <ul>
         <li><p style="color: white" href="#">{{$categorie->category}}</p>
             <ul>
-                <li><a href="#">1</a></li>
-                <li><a href="#">2..</a></li>
+                <div style="margin-left: -45px;">
+                    @foreach ($categorie->products as $obgProductes)
+                    <li><a class="btn btn-outline-success" style="margin: 5px" href="#">{{$obgProductes->product}}</a></li>
+                    @endforeach
+                <div>
             </ul>
         </li>
     </ul>

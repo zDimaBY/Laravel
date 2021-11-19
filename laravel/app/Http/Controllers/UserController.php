@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
-use App\Models\category;
+use App\Models\Category;
 use App\Http\Requests\UserRequest;
 //use Illuminate\Http\Request;
 
@@ -17,7 +17,7 @@ class UserController extends Controller
     public function index()
     {
         $users = User::paginate(5);
-        $categories = category::all();
+        $categories = Category::all();
         return view('index', compact(['users', 'categories']));
         //dd(1234);
     }
@@ -42,7 +42,6 @@ class UserController extends Controller
     {
         user::create($request->only(['name', 'email', 'password']));
         return redirect()->route('users.index');
-        //dd($request->all());
     }
 
     /**
