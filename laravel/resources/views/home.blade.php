@@ -15,6 +15,11 @@
                     @endif
 
                     {{ __('You are logged in!') }}
+                        <div style="color: green">
+                            @foreach ($roles->roles as $arr)
+                            {{$arr->name}}
+                            @endforeach
+                        </div>
                 </div>
             </div>
         </div>
