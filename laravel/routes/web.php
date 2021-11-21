@@ -15,3 +15,6 @@ use Illuminate\Support\Facades\Route;
 
 Route::redirect('/', 'users', 301);
 Route::resource('users', UserController::class);
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
