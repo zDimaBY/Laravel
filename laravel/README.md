@@ -1,21 +1,13 @@
 ## INSTALL
 
-установить PHP-7.4+
+install PHP-7.4+,MySQL,composer ..
 
-установить MySQL
+Execute commands
+cd /var/www/ && git clone https://github.com/zDimaBY/Laravel && cd /Laravel/laravel && composer install && rename .env.example .env
 
-установить composer
+define database, APP_KEY in .env !!
 
-cd /var/www/
-
-git clone https://github.com/zDimaBY/Laravel
-
-cd /Laravel/laravel
-
-composer install
-
-define database, APP_KEY in .env
-
-php artisan db:seed && php artisan db:seed --class=CategorySeeder && php artisan db:seed --class=ProductSeeder
+Execute commands
+php artisan migrate && php artisan db:seed && php artisan db:seed --class=CategorySeeder && php artisan db:seed --class=ProductSeeder
 
 php artisan serve
